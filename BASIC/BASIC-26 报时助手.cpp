@@ -18,3 +18,41 @@
 ÑùÀıÊä³ö
 	zero fifteen
 */
+
+#include <iostream>
+#include <string>
+using namespace std;
+
+string time[24] = {"zero", "one", "two", "three", "four", "five", "six", "seven", "eight", "nine", "ten", "eleven", "twelve", "thirteen",
+	"fourteen", "fifteen", "sixteen", "seventeen", "eighteen", "nineteen", "twenty", "twenty one", "twenty two", "twenty three"};
+
+int main(){
+	int h,m;
+	cin>>h>>m;
+	if(m==0){
+		cout<<time[h]<<"o¡¯clock";
+	}
+	else{
+		cout<<time[h]<<" ";
+		if(m<=23)
+			cout<<time[m]<<endl;
+		else{
+			int s=m%10;
+			m = m/10;
+			int ss=m%10;
+			switch(ss){
+			case 2: cout<<"twenty ";break;
+			case 3: cout<<"thirty ";break;
+			case 4: cout<<"forty "; break;
+			case 5: cout<<"fifty "; break;
+			default: break;
+			}
+			if(s!=0)
+				cout<<time[s]<<endl;
+			else
+				cout<<endl;
+		}
+	}
+	system("pause");
+	return 0;
+}

@@ -30,13 +30,32 @@ using namespace std;
 int main(){
 	int v1,v2,t,s,l;
 	cin>>v1>>v2>>t>>s>>l;
-	double sum1=l,sum2=l;
-	int x;
-	while(sum1 || sum2){
-		x = t/(v1-v2);
-		sum2 -=(x+s)*v2;
-		sum1 -= x*v1;
+	int ttime=l/v2;		//根据乌龟算出总时间
+	int cnttime = 0;
+	int lent = 0;
+	int lenr = 0;
+	int breaktime = 0;//统计兔子休息的时间
+	int flag = 0;//flag==0表示兔子不在休息，flag==1表示兔子正在休息
+	int len1=0, len2=0;
+	while(len1<l && len2<l){
+		if((flag==0 && len2-len1<t) || (flag==1 && breaktime>=s)){
+			len1 += v1;
+			flag = 0;
+			breaktime = 0;
+		} else{
+			flag = 1;
+			breaktime++;
+		}
+		len2 += v2;
+		cnttime++;
 	}
-	
+	if(lent >= l && lenr < l) {
+		cout << "T" << endl;
+	} else if(lent < l && lenr >= l) {
+		cout << "R" << endl;
+	} else {
+		cout << "D" << endl;
+	}
+	cout << cnttime;
 	return 0;
 }
