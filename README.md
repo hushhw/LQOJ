@@ -26,11 +26,15 @@
 ### 动态规划
 
 1. [K好数](https://github.com/hushhw/LQOJ/blob/master/ALGO/ALGO-003%20K%E5%A5%BD%E6%95%B0.cpp) `ALGO-3` `数位dp`
+2. [结点选择](https://github.com/hushhw/LQOJ/blob/master/ALGO/ALGO-004%20%E7%BB%93%E7%82%B9%E9%80%89%E6%8B%A9.cpp) `ALGO-4` `树形dp`
 
 
 
 
-### 其他
+### 数据结构
 
-1. [矩阵乘法](https://github.com/hushhw/LQOJ/blob/master/BASIC/BASIC-17%20%E7%9F%A9%E9%98%B5%E4%B9%98%E6%B3%95.cpp) `BASIC-17` `矩阵`
-
+- 图论
+  - [最短路](https://github.com/hushhw/LQOJ/blob/master/ALGO/ALGO-005%20%E6%9C%80%E7%9F%AD%E8%B7%AF.cpp) `ALGO-5` `SPFA算法`
+- 矩阵
+  - [矩阵乘法](https://github.com/hushhw/LQOJ/blob/master/BASIC/BASIC-17%20%E7%9F%A9%E9%98%B5%E4%B9%98%E6%B3%95.cpp) `BASIC-17` `矩阵`
+- 树&二叉树
