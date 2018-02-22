@@ -35,6 +35,6 @@
 
 - 图论
   - [最短路](https://github.com/hushhw/LQOJ/blob/master/ALGO/ALGO-005%20%E6%9C%80%E7%9F%AD%E8%B7%AF.cpp) `ALGO-5` `SPFA算法`
+  - [安慰奶牛](https://github.com/hushhw/LQOJ/blob/master/ALGO/ALGO-006%20%E5%AE%89%E6%85%B0%E5%A5%B6%E7%89%9B.cpp) `ALGO-6` `最小生成树(krcuskal)`
 - 矩阵
   - [矩阵乘法](https://github.com/hushhw/LQOJ/blob/master/BASIC/BASIC-17%20%E7%9F%A9%E9%98%B5%E4%B9%98%E6%B3%95.cpp) `BASIC-17` `矩阵`
-- 树&二叉树
