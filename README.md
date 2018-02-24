@@ -2,6 +2,7 @@
 
 1. [高精度加法](https://github.com/hushhw/LQOJ/blob/master/BASIC/BASIC-29%20%E9%AB%98%E7%B2%BE%E5%BA%A6%E5%8A%A0%E6%B3%95.cpp)  `BASIC-29` `高精度加法` 
 2. [阶乘计算](https://github.com/hushhw/LQOJ/blob/master/BASIC/BASIC-30%20%E9%98%B6%E4%B9%98%E8%AE%A1%E7%AE%97.cpp) `BASIC-30`  `高精度乘法`
+3. [回文数](https://github.com/hushhw/LQOJ/blob/master/ALGO/ALGO-014%20%E5%9B%9E%E6%96%87%E6%95%B0.cpp) `ALGO-14` `n进制高精度加法`
 
 
 
@@ -27,6 +28,7 @@
 
 1. [K好数](https://github.com/hushhw/LQOJ/blob/master/ALGO/ALGO-003%20K%E5%A5%BD%E6%95%B0.cpp) `ALGO-3` `数位dp`
 2. [结点选择](https://github.com/hushhw/LQOJ/blob/master/ALGO/ALGO-004%20%E7%BB%93%E7%82%B9%E9%80%89%E6%8B%A9.cpp) `ALGO-4` `树形dp`
+3. [拦截导弹](https://github.com/hushhw/LQOJ/blob/master/ALGO/ALGO-013%20%E6%8B%A6%E6%88%AA%E5%AF%BC%E5%BC%B9.cpp) `ALGO-13` `经典题`
 
 
 

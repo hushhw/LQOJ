@@ -20,6 +20,51 @@
 	20100122203011233454668012
 */
 
+
+
+#include <iostream>
+#include <string>
+using namespace std;
+
+int a[101],b[101],c[101];//a,b用来存储倒叙的字符串，c存相加后的结果
+
+int main(){
+	memset(c, 0, sizeof(c));
+	string A,B;
+	cin>>A>>B;
+	int lena=A.length(), lenb=B.length();
+	int len=max(lena, lenb);
+	for(int i=0; i<len; i++){	//倒叙存储字符串，但是为了让a,b数组一样长，缺的部分就补零
+		if(i<lena)
+			a[i] = A[lena-1-i]-'0';
+		else
+			a[i] = 0;
+	}
+	for(int i=0; i<len; i++){
+		if(i<lenb)
+			b[i] = B[lenb-1-i]-'0';
+		else
+			b[i] = 0;
+	}
+	int i;
+	for(i=0; i<len; i++){
+		c[i] = c[i]+a[i]+b[i];
+		c[i+1] = c[i+1] + c[i]/10;
+		c[i] = c[i]%10 ;
+	}
+	if(c[len]!=0){
+		len += 1;
+	}
+	int ok=0;
+	for(i=len-1; i>=0; i--){
+		cout<<c[i];
+	}
+	cout<<endl;
+	system("pause");
+	return 0;
+}
+
+/*
 #include <iostream>
 #include <string>
 using namespace std;
@@ -63,3 +108,4 @@ int main(){
 	system("pause");
 	return 0;
 }
+*/

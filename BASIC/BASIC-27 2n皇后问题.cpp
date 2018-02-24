@@ -39,7 +39,72 @@
 以上是完成一次n皇后的搜索，题目实际上是要求完成两次，并且两次搜索所得到的皇后位置不能重合，所以还要一个visit数组来记录访问情况。
 */
 
+#include <iostream>
+#include <string>
+using namespace std;
 
+int q[10][10];
+bool visit[10][10];
+int b[10],w[10];
+int sum;
+
+bool panduan(int *q, int r, int c){
+	int i;
+	int t_r, t_c;
+	for(int i=0; i<r; i++){
+		t_r = i;	//之前已经被标记的皇后坐标(i,q[i])。
+		t_c = q[i];
+		if(abs(r-t_r)==abs(c-t_c) || (c-t_c==0))//如果在同一列，或在对角线上
+			return 0;
+	}
+	return 1;
+}
+
+void w_queen(int t, int n){
+	if(t==n){
+		sum++;
+		return ;
+	}
+	for(int i=0; i<n; i++){
+		if(q[t][i]==1 && visit[t][i]==0 && panduan(w, t, i)){
+			w[t]=i;
+			w_queen(t+1, n);
+		}
+	}
+}
+
+void b_queen(int t, int n){ //t代表行号
+	if(t==n){
+		w_queen(0, n);
+		return ;
+	}
+	for(int i=0; i<n; i++){
+		if(q[t][i]==1 && visit[t][i]==0 && panduan(b, t, i)){
+			b[t]=i;
+			visit[t][i]=1; //已经被标记
+			b_queen(t+1, n);
+			visit[t][i]=0;
+		}
+	}
+}
+
+int main(){
+	int n;
+	sum=0;
+	cin>>n;
+	for(int i=0; i<n; i++){
+		for(int j=0; j<n; j++){
+			cin>>q[i][j];
+		}
+	}
+	memset(visit, 0, sizeof(visit));
+	b_queen(0,n);
+	cout<<sum<<endl;
+	system("pause");
+	return 0;
+}
+
+/*
 #include <iostream>
 #include <string>
 using namespace std;
@@ -106,3 +171,4 @@ int main(){
 	system("pause");
 	return 0;
 }
+*/
